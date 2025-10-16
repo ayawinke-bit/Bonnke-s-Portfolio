@@ -1,70 +1,62 @@
+import { Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Mail, MessageSquare, Briefcase } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-32 bg-secondary/30 relative">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Section Header */}
-          <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="gradient-text">Let's Build Something</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Whether you need a complete system, a specific feature, or just want to discuss 
-              a technical challenge — I'm ready to help make it happen.
-            </p>
-          </div>
-
-          {/* Contact Options */}
+    <section id="contact" className="py-24 bg-secondary/50">
+      <div className="container">
+        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
+          Get In <span className="text-primary">Touch</span>
+        </h2>
+        
+        <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-card border border-border rounded-2xl p-6 hover:border-primary/50 transition-all duration-300">
-              <div className="inline-flex p-3 rounded-lg bg-primary/10 mb-4">
-                <Briefcase className="h-6 w-6 text-primary" />
+            <div className="p-6 bg-card border border-border rounded-xl text-center hover:border-primary/50 transition-all">
+              <div className="inline-flex p-3 bg-primary/10 rounded-lg mb-4">
+                <Phone className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Freelance Work</h3>
-              <p className="text-muted-foreground text-sm">
-                Available for project-based work and consulting
-              </p>
+              <h3 className="font-semibold mb-2">Phone</h3>
+              <a 
+                href="tel:0745617108"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                0745617108
+              </a>
             </div>
 
-            <div className="bg-card border border-border rounded-2xl p-6 hover:border-accent/50 transition-all duration-300">
-              <div className="inline-flex p-3 rounded-lg bg-accent/10 mb-4">
-                <MessageSquare className="h-6 w-6 text-accent" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Collaboration</h3>
-              <p className="text-muted-foreground text-sm">
-                Open to partnerships and technical discussions
-              </p>
-            </div>
-
-            <div className="bg-card border border-border rounded-2xl p-6 hover:border-primary/50 transition-all duration-300">
-              <div className="inline-flex p-3 rounded-lg bg-primary/10 mb-4">
+            <div className="p-6 bg-card border border-border rounded-xl text-center hover:border-primary/50 transition-all">
+              <div className="inline-flex p-3 bg-primary/10 rounded-lg mb-4">
                 <Mail className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Full-Time</h3>
-              <p className="text-muted-foreground text-sm">
-                Considering opportunities with innovative teams
+              <h3 className="font-semibold mb-2">Email</h3>
+              <a 
+                href="mailto:bonnkereinhard654@gmail.com"
+                className="text-muted-foreground hover:text-primary transition-colors break-all"
+              >
+                bonnkereinhard654@gmail.com
+              </a>
+            </div>
+
+            <div className="p-6 bg-card border border-border rounded-xl text-center hover:border-primary/50 transition-all">
+              <div className="inline-flex p-3 bg-primary/10 rounded-lg mb-4">
+                <MapPin className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-semibold mb-2">Location</h3>
+              <p className="text-muted-foreground">
+                Homa Bay / Kisii, Kenya
               </p>
             </div>
           </div>
 
-          {/* CTA */}
-          <div className="bg-card border border-border rounded-2xl p-8 md:p-12">
-            <h3 className="text-2xl font-bold mb-4">Ready to start?</h3>
-            <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              Drop me a message about your project or opportunity. I typically respond within 24 hours.
+          <div className="text-center p-8 bg-card border border-border rounded-xl">
+            <p className="text-lg text-muted-foreground mb-6">
+              Interested in working together or learning more about my projects?
             </p>
-            <Button
+            <Button 
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              asChild
+              onClick={() => window.location.href = 'mailto:bonnkereinhard654@gmail.com'}
             >
-              <a href="mailto:rainhard@example.com">
-                <Mail className="mr-2 h-5 w-5" />
-                Send Email
-              </a>
+              Send Me an Email
             </Button>
           </div>
         </div>

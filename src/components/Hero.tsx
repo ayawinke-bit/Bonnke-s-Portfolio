@@ -1,87 +1,94 @@
+import profilePhoto from "@/assets/profile-photo.jpeg";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background" />
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary" />
       
-      {/* Floating orbs */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "2s" }} />
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          {/* Greeting */}
-          <div className="inline-block">
-            <span className="text-accent font-medium text-lg">Hey, I'm</span>
+      {/* Content wrapper */}
+      <div className="container relative z-10 grid lg:grid-cols-2 gap-12 items-center py-20">
+        {/* Left content */}
+        <div className="space-y-8 animate-fade-in">
+          <div className="space-y-4">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+              Reinhard Bonnke
+              <span className="block text-primary mt-2">Ochieng</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-xl">
+              Web Developer & Computer Science Student
+            </p>
           </div>
           
-          {/* Name */}
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight">
-            <span className="gradient-text">Rainhard Bonnke</span>
-          </h1>
-          
-          {/* Title */}
-          <p className="text-2xl md:text-3xl text-muted-foreground font-light">
-            Full-Stack Developer & System Builder
+          <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
+            Innovative full-stack developer crafting modern, scalable applications 
+            with expertise in React, Node.js, and AI-powered solutions.
           </p>
-          
-          {/* Description */}
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            I design and build real-world, full-stack systems that combine beautiful interfaces 
-            with powerful management backends. From travel agencies to custom business solutions, 
-            I create functional, modern, and attractive systems that help companies run better.
-          </p>
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4 justify-center pt-4">
+
+          <div className="flex flex-wrap gap-4">
             <Button 
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground group"
-              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              className="group"
+              onClick={() => scrollToSection('contact')}
             >
-              View My Work
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              Get In Touch
+              <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
             </Button>
             <Button 
               size="lg" 
               variant="outline"
-              className="border-border hover:bg-secondary group"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => scrollToSection('projects')}
             >
-              Get In Touch
-              <Mail className="ml-2 h-4 w-4" />
+              View Projects
             </Button>
           </div>
-          
-          {/* Social Links */}
-          <div className="flex gap-4 justify-center pt-8">
-            <a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-secondary hover:bg-primary/20 transition-colors"
-            >
-              <Github className="h-5 w-5" />
-            </a>
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="p-3 rounded-lg bg-secondary hover:bg-primary/20 transition-colors"
-            >
-              <Linkedin className="h-5 w-5" />
-            </a>
-            <a 
-              href="mailto:rainhard@example.com"
-              className="p-3 rounded-lg bg-secondary hover:bg-primary/20 transition-colors"
-            >
-              <Mail className="h-5 w-5" />
-            </a>
+
+          {/* Quick stats */}
+          <div className="flex flex-wrap gap-8 pt-8 border-t border-border">
+            <div>
+              <div className="text-3xl font-bold text-primary">5+</div>
+              <div className="text-sm text-muted-foreground">Projects Built</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-primary">2025</div>
+              <div className="text-sm text-muted-foreground">Ongoing Studies</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-primary">Full-Stack</div>
+              <div className="text-sm text-muted-foreground">Developer</div>
+            </div>
           </div>
         </div>
+
+        {/* Right side - Photo with blend effect */}
+        <div className="relative h-[600px] lg:h-[700px] hidden lg:block">
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-background/50 to-background z-10" />
+          <div 
+            className="absolute inset-0 rounded-2xl overflow-hidden"
+            style={{
+              boxShadow: 'var(--shadow-cyan)'
+            }}
+          >
+            <img 
+              src={profilePhoto} 
+              alt="Reinhard Bonnke Ochieng at workspace"
+              className="w-full h-full object-cover object-center mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
+            />
+          </div>
+          {/* Accent border */}
+          <div className="absolute -inset-1 bg-gradient-to-br from-primary via-primary-glow to-primary rounded-2xl opacity-20 blur-xl" />
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <ArrowDown className="h-6 w-6 text-primary" />
       </div>
     </section>
   );
