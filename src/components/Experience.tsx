@@ -39,21 +39,35 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div 
               key={index}
-              className="p-6 bg-card border border-border rounded-xl hover:border-primary/50 transition-all"
+              className="relative p-8 bg-gradient-to-br from-card to-card/50 border border-border rounded-xl hover:border-primary/50 transition-all duration-500 hover:shadow-3d-hover hover:-translate-y-1"
+              style={{ boxShadow: 'var(--shadow-3d)' }}
             >
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg mt-1">
-                  <Briefcase className="h-6 w-6 text-primary" />
+              {/* Timeline indicator */}
+              <div className="absolute -left-3 top-8 w-6 h-6 bg-primary rounded-full border-4 border-background" />
+              
+              <div className="flex items-start gap-6">
+                <div className="p-4 bg-primary/10 rounded-xl mt-1 border border-primary/20">
+                  <Briefcase className="h-7 w-7 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-1">{exp.role}</h3>
-                  <p className="text-muted-foreground mb-1">{exp.company}</p>
-                  <p className="text-sm text-muted-foreground mb-4">{exp.location} • {exp.period}</p>
-                  <ul className="space-y-2">
+                  <div className="flex flex-wrap items-start justify-between gap-4 mb-3">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-2 text-foreground">{exp.role}</h3>
+                      <p className="text-lg text-primary font-medium">{exp.company}</p>
+                    </div>
+                    <div className="px-4 py-2 bg-primary/10 rounded-lg border border-primary/30">
+                      <p className="text-sm font-medium text-primary">{exp.period}</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-6 flex items-center gap-2">
+                    <span className="w-1 h-1 rounded-full bg-primary" />
+                    {exp.location}
+                  </p>
+                  <ul className="space-y-3">
                     {exp.responsibilities.map((resp, respIndex) => (
-                      <li key={respIndex} className="flex items-start gap-2 text-muted-foreground">
-                        <span className="text-primary mt-1.5">•</span>
-                        <span>{resp}</span>
+                      <li key={respIndex} className="flex items-start gap-3 text-muted-foreground leading-relaxed">
+                        <span className="text-primary mt-1 text-lg">▸</span>
+                        <span className="text-base">{resp}</span>
                       </li>
                     ))}
                   </ul>

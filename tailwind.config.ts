@@ -99,6 +99,8 @@ export default {
       boxShadow: {
         glow: "var(--shadow-glow)",
         cyan: "var(--shadow-cyan)",
+        '3d': "var(--shadow-3d)",
+        '3d-hover': "var(--shadow-3d-hover)",
       },
     },
   },
