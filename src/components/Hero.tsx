@@ -22,7 +22,7 @@ const Hero = () => {
               <span className="block text-primary mt-2">Ochieng</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-xl">
-              Web Developer & Computer Science Student
+              Full Stack Developer & Computer Science Student
             </p>
           </div>
           
@@ -68,7 +68,7 @@ const Hero = () => {
 
         {/* Right side - Photo with blend effect */}
         <div className="relative h-[600px] lg:h-[700px] hidden lg:block">
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-background/50 to-background z-10" />
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-background/30 to-background z-10" />
           <div 
             className="absolute inset-0 rounded-2xl overflow-hidden"
             style={{
@@ -77,12 +77,12 @@ const Hero = () => {
           >
             <img 
               src={profilePhoto} 
-              alt="Reinhard Bonnke Ochieng at workspace"
-              className="w-full h-full object-cover object-center mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
+              alt="Reinhard Bonnke Ochieng at workspace with multiple monitors"
+              className="w-full h-full object-cover object-center opacity-90 hover:opacity-100 transition-all duration-700"
             />
           </div>
           {/* Accent border */}
-          <div className="absolute -inset-1 bg-gradient-to-br from-primary via-primary-glow to-primary rounded-2xl opacity-20 blur-xl" />
+          <div className="absolute -inset-1 bg-gradient-to-br from-primary via-primary-glow to-primary rounded-2xl opacity-30 blur-xl" />
         </div>
       </div>
 

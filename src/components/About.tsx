@@ -8,7 +8,7 @@ const About = () => {
         
         <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground leading-relaxed">
           <p className="text-xl">
-            Innovative and detail-oriented Web Developer and Computer Science student with strong 
+            Innovative and detail-oriented Full Stack Developer and Computer Science student with strong 
             experience in building full-stack systems and modern, responsive websites. Skilled in 
             JavaScript, React, Node.js, Firebase, and MySQL, with a passion for designing clean, 
             functional, and scalable applications.
@@ -69,7 +69,7 @@ const About = () => {
             </h3>
             <div className="space-y-3">
               <p className="font-semibold text-foreground text-lg">Bachelor of Science in Computer Science</p>
-              <p className="text-muted-foreground">Kisii University — 3rd Year (Ongoing)</p>
+              <p className="text-muted-foreground">Kisii University — 4th Year (Ongoing)</p>
               <p className="text-sm text-muted-foreground">Expected Graduation: 2026</p>
               <div className="mt-4 pt-4 border-t border-border">
                 <p className="text-sm text-muted-foreground mb-2">Key Coursework:</p>
