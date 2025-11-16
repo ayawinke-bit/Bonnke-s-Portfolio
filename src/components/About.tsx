@@ -8,7 +8,7 @@ const About = () => {
         
         <div className="max-w-4xl mx-auto space-y-6 text-lg text-muted-foreground leading-relaxed">
           <p className="text-xl">
-            Innovative and detail-oriented Full Stack Developer and Computer Science student with strong 
+            Innovative and detail-oriented Full Stack Developer with strong 
             experience in building full-stack systems and modern, responsive websites. Skilled in 
             JavaScript, React, Node.js, Firebase, and MySQL, with a passion for designing clean, 
             functional, and scalable applications.
@@ -23,8 +23,7 @@ const About = () => {
 
           <p>
             With hands-on experience in AI integration, payment systems, and database architecture, 
-            I bring a comprehensive skill set to every project. Currently pursuing my Bachelor's in 
-            Computer Science at Kisii University while actively freelancing and building innovative 
+            I bring a comprehensive skill set to every project. Currently freelancing and building innovative 
             solutions for clients across various industries.
           </p>
 
@@ -52,7 +51,7 @@ const About = () => {
               </p>
               <p className="flex flex-col">
                 <strong className="text-foreground text-sm mb-1">Location</strong>
-                <span className="text-lg">Homa Bay / Kisii, Kenya</span>
+                <span className="text-lg">Nairobi / Kisii, Kenya</span>
               </p>
               <p className="flex flex-col pt-2">
                 <strong className="text-foreground text-sm mb-1">Availability</strong>
@@ -69,8 +68,8 @@ const About = () => {
             </h3>
             <div className="space-y-3">
               <p className="font-semibold text-foreground text-lg">Bachelor of Science in Computer Science</p>
-              <p className="text-muted-foreground">Kisii University — 4th Year (Ongoing)</p>
-              <p className="text-sm text-muted-foreground">Expected Graduation: 2026</p>
+              <p className="text-muted-foreground">Kisii University </p>
+              {/*<p className="text-sm text-muted-foreground">Expected Graduation: 2026</p>*/}
               <div className="mt-4 pt-4 border-t border-border">
                 <p className="text-sm text-muted-foreground mb-2">Key Coursework:</p>
                 <div className="flex flex-wrap gap-2">

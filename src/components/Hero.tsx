@@ -22,7 +22,7 @@ const Hero = () => {
               <span className="block text-primary mt-2">Ochieng</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-xl">
-              Full Stack Developer & Computer Science Student
+              Full Stack Developer 
             </p>
           </div>
           
@@ -56,8 +56,8 @@ const Hero = () => {
               <div className="text-sm text-muted-foreground">Projects Built</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-primary">2025</div>
-              <div className="text-sm text-muted-foreground">Ongoing Studies</div>
+              {/*<div className="text-3xl font-bold text-primary">2025</div>
+              <div className="text-sm text-muted-foreground">Ongoing Studies</div>*/}
             </div>
             <div>
               <div className="text-3xl font-bold text-primary">Full-Stack</div>
